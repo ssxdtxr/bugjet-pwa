@@ -3,8 +3,9 @@ import { RouteObject } from "react-router";
 
 export const routes: RouteObject[] = [
   {
-    index: true,
-    path: "/login",
-    Component: LoginPage,
+    path: "/",
+    children: [
+      {path: 'login', index: true, Component: LoginPage}
+    ] 
   },
 ]
